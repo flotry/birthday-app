@@ -1,12 +1,12 @@
 README.md
 
-# 🎉 Birthday Reminder App
+## Birthday Reminder App
 
 A simple containerized Node.js web application deployed on DigitalOcean Kubernetes (DOKS). This app is built to demonstrate scalable infrastructure, autoscaling, load balancing, and cost-optimized deployment.
 
 ---
 
-## 🚀 Features
+## Features
 
 - Node.js web server using Express
 - Dockerized and deployed via DigitalOcean Container Registry
@@ -17,7 +17,7 @@ A simple containerized Node.js web application deployed on DigitalOcean Kubernet
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 
 birthday-app/ ├── index.js ├── package.json ├── Dockerfile ├── deployment.yaml ├── service.yaml └── README.md
@@ -26,7 +26,7 @@ Copy
 
 ---
 
-## 🧱 Prerequisites
+## Prerequisites
 
 Make sure the following are installed:
 
@@ -38,7 +38,7 @@ Make sure the following are installed:
 
 ---
 
-## ⚙️ Local Setup
+## Local Setup
 
 1. Clone the repository:
 
