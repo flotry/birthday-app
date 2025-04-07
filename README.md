@@ -50,7 +50,6 @@ Install dependencies and run:
 
 
 bash
-Copy
 npm install
 node index.js
 
@@ -58,7 +57,6 @@ Visit http://localhost:3000
 
 Docker Build & Test
 bash
-Copy
 docker build -t birthday-app .
 docker run -p 3000:3000 birthday-app
 
@@ -66,7 +64,6 @@ docker run -p 3000:3000 birthday-app
 
 Push to DigitalOcean Container Registry
 bash
-Copy
 doctl auth init
 doctl registry create birthday-registry
 doctl registry login
@@ -80,7 +77,6 @@ Create a DOKS cluster:
 
 
 bash
-Copy
 doctl kubernetes cluster create birthday-cluster --region nyc1 --count 3
 doctl kubernetes cluster kubeconfig save birthday-cluster
 
@@ -88,14 +84,12 @@ Grant registry access to the cluster:
 
 
 bash
-Copy
 doctl kubernetes cluster registry add birthday-cluster
 
 Apply the deployment and service:
 
 
 bash
-Copy
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 
@@ -103,7 +97,6 @@ Get the external IP:
 
 
 bash
-Copy
 kubectl get svc birthday-service
 
 Open in your browser to access the app.
@@ -113,14 +106,12 @@ Install metrics server:
 
 
 bash
-Copy
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
 Create a Horizontal Pod Autoscaler (HPA):
 
 
 bash
-Copy
 kubectl autoscale deployment birthday-app --cpu-percent=50 --min=2 --max=5
 kubectl get hpa
 
@@ -128,7 +119,6 @@ kubectl get hpa
 Resource Limits
 The app uses the following default limits in deployment.yaml:
 yaml
-Copy
 resources:
   requests:
     cpu: "100m"
